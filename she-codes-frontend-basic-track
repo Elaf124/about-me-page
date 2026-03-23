@@ -44,8 +44,6 @@
         <option value ="Ad">Ad</option> 
         </select>
       </div>
-
-  
 <div>
   <label for="interest">Interest: </label>
 <input type="checkbox" id="subscribe" name="subscribe">
