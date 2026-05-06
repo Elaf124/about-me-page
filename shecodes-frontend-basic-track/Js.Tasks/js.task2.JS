@@ -1,6 +1,3 @@
-<script>
-
-// Store tasks
 let tasks = [];
 
 // Add Task
@@ -45,7 +42,7 @@ function listTasks() {
   console.log("-----------------------");
 }
 
-// 🔥 MAIN MENU LOOP
+
 while (true) {
   let choice = prompt(
     "Choose:\n1. Add Task\n2. Delete Task\n3. List Tasks\n4. Exit"
@@ -68,5 +65,3 @@ while (true) {
     console.log("Invalid choice!");
   }
 }
-
-</script>
