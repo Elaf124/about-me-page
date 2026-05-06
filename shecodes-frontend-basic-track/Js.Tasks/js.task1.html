@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <link rel="stylesheet"  href="task1.css"/>
+    <meta charset="UTF-8">
+    <title>My JS Menu</title>
+</head>
+
+<body>
+  
+    <h1>Hi there!!</h1>
+    <p>This my first time working with javscript and I loved it.</p>
+    <script>
+
+function greetUser() {
+  let name = prompt("Enter your name:");
+  alert("Hello, " + name + "! Welcome.");
+}
+function checkEvenOdd() {
+  let num = prompt("Enter a number:");
+
+  if (num % 2 == 0) {
+    alert("The number is Even");
+  } else {
+    alert("The number is Odd");
+  }
+}
+
+function calculator() {
+  let num1 = parseFloat(prompt("Enter first number:"));
+  let num2 = parseFloat(prompt("Enter second number:"));
+  let op = prompt("Enter operation (+, -, *, /):");
+
+  let result;
+
+  if (op == "+") {
+    result = num1 + num2;
+  } else if (op == "-") {
+    result = num1 - num2;
+  } else if (op == "*") {
+    result = num1 * num2;
+  } else if (op == "/") {
+    result = num1 / num2;
+  } else {
+    alert("Invalid operation");
+    return;
+  }
+
+  alert("Result: " + result);
+}
+let choice = prompt(
+  "Choose an option:\n1. Greet User\n2. Even or Odd\n3. Calculator"
+);
+
+if (choice == "1") {
+  greetUser();
+} else if (choice == "2") {
+  checkEvenOdd();
+} else if (choice == "3") {
+  calculator();
+} else {
+  alert("Invalid choice");
+}
+
+</script>
+</body>
+</html>

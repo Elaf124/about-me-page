@@ -1,0 +1,14 @@
+body {
+background-color: pink ;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+     color: darkblue;
+  text-align:left;
+}
+  p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkblue;
+    font-size: larger;
+  
+  }
