@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet"  href="DOM.css"/>
+<meta charset="UTF-8">
+<title>To-Do List App</title>
+
+</style>
+</head>
+<body>
+
+<h2>To-Do List</h2>
+
+<div class="input-box">
+  <input type="text" id="taskInput" placeholder="Enter task">
+  <button onclick="addTask()">Add Task</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Task</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="taskTable"></tbody>
+</table>
+
+<script>
+
+let tasks = [];
+function addTask() {
+  let input = document.getElementById("taskInput");
+  let task = input.value;
+
+  if (task === "") {
+    alert("Please enter a task!");
+    return;
+  }
+
+  tasks.push(task);
+  input.value = "";
+
+  displayTasks();
+}
+function displayTasks() {
+  let table = document.getElementById("taskTable");
+  table.innerHTML = "";
+
+  for (let i = 0; i < tasks.length; i++) {
+    table.innerHTML += `
+      <tr>
+        <td>${i}</td>
+        <td>${tasks[i]}</td>
+        <td><button class="delete-btn" onclick="deleteTask(${i})">Delete</button></td>
+      </tr>
+    `;
+  }
+}
+function deleteTask(index) {
+  tasks.splice(index, 1);
+  displayTasks();
+}
+
+</script>
+
+</body>
+</html>
